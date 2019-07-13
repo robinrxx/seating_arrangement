@@ -1,0 +1,104 @@
+
+#include <stdio.h>
+
+int main()
+{
+    long int num;
+	int i,j,k[100000];
+	scanf("%d", &num);              			// Reading input from STDIN
+	for(i=0;i<num;i++)
+	{
+	    scanf("%d",&k[i]);
+	}
+	for(i=0;i<num;i++)
+	{
+	    if(k[i]%12<7)
+    	    {
+        	    j=k[i]%6;
+        	    if(j==1)
+        	    {
+        	        k[i]+=11;
+        	        printf("%d WS\n",k[i]);
+        	        
+        	    }
+        	    if(j==2)
+        	    {
+        	        k[i]+=10;
+        	        printf("%d MS\n",k[i]);
+        	        
+        	    }
+        	    if(j==3)
+        	    {
+        	        k[i]+=9;
+        	        printf("%d AS\n",k[i]);
+        	        
+        	    }
+        	    if(j==4)
+        	    {
+        	        k[i]+=5;
+        	        printf("%d AS\n",k[i]);
+        	        
+        	    }
+        	    if(j==5)
+        	    {
+        	        k[i]+=3;
+        	        printf("%d MS\n",k[i]);
+        	        
+        	    }
+        	    if(j==0)
+        	    {
+        	        if(k[i]%12==0)
+        	        {
+        	            k[i]-=11;
+        	            printf("%d WS\n")
+        	        }
+        	        else
+        	        {
+        	        k[i]+=1;
+        	        printf("%d WS\n",k[i]);
+        	        }
+        	    }
+        	 }
+        else
+        	 {
+        	    j=k[i]%6;
+        	    if(j==1)
+        	    {
+        	        k[i]-=1;
+        	        printf("%d WS\n",k[i]);
+        	        
+        	    }
+        	    if(j==2)
+        	    {
+        	        k[i]-=3;
+        	        printf("%d MS\n",k[i]);
+        	        
+        	    }
+        	    if(j==3)
+        	    {
+        	        k[i]-=5;
+        	        printf("%d AS\n",k[i]);
+        	        
+        	    }
+        	    if(j==4)
+        	    {
+        	        k[i]-=7;
+        	        printf("%d AS\n",k[i]);
+        	        
+        	    }
+        	    if(j==5)
+        	    {
+        	        k[i]-=9;
+        	        printf("%d MS\n",k[i]);
+        	        
+        	    }
+        	    if(j==0)
+        	    {
+        	        k[i]-=11;
+        	        printf("%d WS\n",k[i]);
+        	        
+        	    }
+    	    }
+	}
+}
+
