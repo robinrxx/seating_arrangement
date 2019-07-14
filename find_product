@@ -1,0 +1,22 @@
+import java.util.Scanner;
+import java.lang.Math;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+    Scanner sc=new Scanner(System.in);
+    long num,i,j,l;
+    l=(int)Math.pow(10,9)+7;
+    long k[]=new long[100000];
+	num=sc.nextInt(); 
+	j=1;
+	for(i=0;i<num;i++)
+	{
+	    k[i]=sc.nextLong(); \\ isme error hai
+	}// Reading input from STDIN
+    for(i=0;i<num;i++)
+    {
+        j=(j*k[i])%l;
+    }// Writing o
+    System.out.ptintln(j);
+    }   
+}
+
