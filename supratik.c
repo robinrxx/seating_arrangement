@@ -9,12 +9,13 @@ int main(){
 		
 		shift  = shift % array_size;
 		
-		while(shift-- > 0){   
+		while(shift-- > 0){
+			i = array_size;
 			temp = m[i-1];
 			for(n=i-1;n > 0;) m[n] = m[--n];
 			m[0] = temp;
 		}
 		
-		while(i>0) printf("%d ",m[--i]);
+		while(array_size>0) printf("%d ",m[--array_size]);
 	}
 }
