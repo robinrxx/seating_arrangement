@@ -1,21 +1,18 @@
 #include <stdio.h>
 
 int main(){
-	long testcases, array_size, shift, k,l,m[100000],temp,n;
-	scanf("%d", &testcases); 
+	long testcases, size, shift, k,l,m[100000],temp,n;
+	scanf("%ld", &testcases); 
 	while(testcases-- > 0){
-		scanf("%d %d",&array_size, &shift);
-		for(l=0; l<array_size; l++) scanf("%d",&m[l]);
+		scanf("%ld %ld",&size, &shift);
+		for(l=0; l<size; l++) scanf("%ld",&m[l]);
 		
-		shift  = shift % array_size;
-		
-		while(shift-- > 0){
-			i = array_size;
-			temp = m[i-1];
-			for(n=i-1;n > 0;) m[n] = m[--n];
-			m[0] = temp;
+		shift = size - (shift%size);
+		for(l=0;l<size;l++){
+			if(shift>=size)shift = 0;
+			printf("%ld ", m[shift]);
+			shift++;
 		}
-		
-		while(array_size>0) printf("%d ",m[--array_size]);
+		printf("\n");
 	}
 }
